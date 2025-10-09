@@ -25,7 +25,7 @@ format:
     number-sections: true
     toc: true
     lof: true
-    lot: true
+    lot: false
     titlepage: academic
     titlepage-logo: img/logo.png
     second-logo: img/svm.png
@@ -139,7 +139,8 @@ This report will first introduce the linear classification problem and the perce
 ## Links
 
 - [GitHub Repository](https://github.com/chenkeao/A-Study-On-SVMs)
-- [Colab Notebook](https://colab.research.google.com/drive/1rjynBGdHSzObNugCLMloa5P_fMWEPwD_?usp=sharing)
+- [Colab Notebook](https://colab.research.google.com/drive/1OjK9RxJK0tJ5NS8ND3SRkLxcXDtOuQCi?usp=sharing)
+- This report is written with the help of AI. Here is the [first conversation](https://chatgpt.com/share/68e5ef22-459c-8000-b1cb-820eedb221cb) and the [second conversation](https://chatgpt.com/share/68e5f170-603c-8000-9bc4-a915d61c59e1).
 
 # Background
 
@@ -147,7 +148,7 @@ This report will first introduce the linear classification problem and the perce
 
 SVM is a solution to the linear classification problem. Linear classification refers to the task of classifying data points into different categories based on a linear decision boundary. If the input space $X$ is a subset of $\mathbb{R}^n$, where $n\ge1$ is the number of features in the dataset, a linear decision boundary can be defined as a flat affine subspace of dimension $n-1$. For example, in a 2-dimensional space, the decision boundary is a line, while in a 3-dimensional space, it is a plane. In higher-dimensional spaces, it is referred to as a hyperplane.
 
-A hyperplane can be defined by th equation:
+A hyperplane can be defined by the equation:
 
 $$
 \mathbf{w} \cdot \mathbf{x} + b = 0
@@ -747,7 +748,7 @@ show_hyperplane(qp_svm.decision_function, (-2, 6))
 
 Even though a maximum margin classifier is able to find the optimal hyperplane for linearly separable data already, it is quite sensitive to noise and outliers. In addtion, real-world data is often not linearly separable, in which case the maximum margin classifier fails to find a decision boundary.
 
-A solution to these problems is to introduce slack variables $\xi = \{\xi_1, \cdots, \xi_n\}$ for each data point that allow some points to violate the margin or even the decision boundary. In this way, the model gives up classifying all training data correctly, but it allows some data points, which are probably noises or outliers,to be very close to the decision boundary or even on the wrong side of it.
+A solution to these problems is to introduce slack variables $\xi = \{\xi_1, \cdots, \xi_n\}$ for each data point that allow some points to violate the margin or even the decision boundary. In this way, the model gives up classifying all training data correctly, but it allows some data points, which are probably noises or outliers, to be very close to the decision boundary or even on the wrong side of it.
 
 This will increase the bias of the model but reduce its variance, leading to a worse performance on training set, but probably a better performance on testing data. In other words, it generalizes better. Moreover, to trade off the margin size and the number of misclassifications, a regularization parameter $C$ is introduced. Accordingly, the optimization problem becomes:
 
@@ -1728,7 +1729,7 @@ In conclusion, this report provides a comprehensive overview of the principles a
 # Appendix
 
 1. The conversation with AI can be found at [here](https://chatgpt.com/share/68e5ef22-459c-8000-b1cb-820eedb221cb) and [here](https://chatgpt.com/share/68e5f170-603c-8000-9bc4-a915d61c59e1).
-2. The jupyter notebook for the visualizations and the implementations of the models in this report can be found at [here](https://colab.research.google.com/drive/1rjynBGdHSzObNugCLMloa5P_fMWEPwD_?usp=sharing).
+2. The jupyter notebook for the visualizations and the implementations of the models in this report can be found at [here](https://colab.research.google.com/drive/1OjK9RxJK0tJ5NS8ND3SRkLxcXDtOuQCi?usp=sharing).
 3. This report is written in Quarto markdown. The source code of this report can be found at [here](https://github.com/chenkeao/A-Study-On-SVMs).
 4. This report uses `quarto titlepages` theme, which can be found [here](https://nmfs-opensci.github.io/quarto_titlepages/).
 5. The picture on the cover page is from [here](https://blog.pluskid.org/archives/632).
