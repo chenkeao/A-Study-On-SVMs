@@ -8,6 +8,7 @@ bibliography: references.bib
 csl: apa.csl
 format:
   titlepage-pdf:
+    pdf-engine: lualatex
     fontsize: 12pt
     colorlinks: true
     link-citations: true
@@ -16,8 +17,7 @@ format:
         \usepackage{fvextra}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
         \DefineVerbatimEnvironment{OutputCode}{Verbatim}{breaklines,commandchars=\\\{\}}
-        \usepackage{luatexja-fontspec}
-        \setmainjfont{Noto Serif CJK SC}
+    cjk-mainfont: "Noto Serif CJK SC"
     documentclass: scrbook
     classoption:
       - oneside
